@@ -64,9 +64,9 @@ func handle() {
 
 func worker(queque []int, id int, jobs <-chan int, results chan<- int) {
 	for j := range jobs {
-		fmt.Println("counter", id, "started queque", j)
+		fmt.Println("counter", id, "started queue", j)
 		time.Sleep(time.Duration(queque[j-1]) * time.Second)
-		fmt.Println("counter", id, "finished queque", j, " in ", queque[j-1], " second")
+		fmt.Println("counter", id, "finished queue", j, " in ", queque[j-1], " second")
 		results <- j
 	}
 }
