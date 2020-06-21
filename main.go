@@ -69,6 +69,7 @@ func worker(queque []int, id int, jobs <-chan int, results chan<- int) {
 		fmt.Println("counter", id, "finished queue", j, " in ", queque[j-1], " second")
 		results <- j
 	}
+	fmt.Println("Job's Finished")
 }
 
 func main() {
