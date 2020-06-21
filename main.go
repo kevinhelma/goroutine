@@ -87,6 +87,5 @@ func main() {
 		fmt.Printf("Got %s signal. Aborting...\n", sig)
 		<-c
 		task.Stop()
-		task.wg.Wait()
 	}
 }
